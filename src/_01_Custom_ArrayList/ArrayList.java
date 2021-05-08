@@ -8,6 +8,7 @@ public class ArrayList <T>{
 	}
 	
 	public T get(int loc) throws IndexOutOfBoundsException {
+		int number =0;
 		
 		return null;
 	}
