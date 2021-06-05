@@ -19,7 +19,7 @@ public class SwitchStatementDemo {
 				System.out.println("Something went wrong :(");
 			}
 		}
-		int Enum=0;
+		
 		{
 			/*
 			 *  Remove the 'break;' statements and run it again.
