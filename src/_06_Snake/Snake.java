@@ -4,6 +4,8 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.util.ArrayList;
 
+import javax.swing.JOptionPane;
+
 public class Snake {
 	public static final Color SNAKE_COLOR = Color.BLUE;
 	public static final int BODY_SIZE = 50;
@@ -36,7 +38,13 @@ public class Snake {
 	public void update() {
 		//1. use a switch statement to check on the currentDirection
 		//   of the snake and calculate its next x and y position.
-		
+		Location loc=new Location(head.getLocation().x,head.getLocation().y);
+		switch(currentDirection) {
+		case UP:{
+			loc.y--;
+			break;
+		}
+		}
 
 		//2. Iterate through the SnakeSegments in reverse order
 		//2a. Update each snake segment to the location of the segment 
