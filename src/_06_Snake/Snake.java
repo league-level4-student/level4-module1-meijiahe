@@ -128,8 +128,11 @@ public class Snake {
 	public boolean isLocationOnSnake(Location loc) {
 		//1. complete the method so it returns true if the passed in
 		//   location is located on the snake
-		if (loc.equals(snake.get(BODY_SIZE).getLocation())) {
-			return true;
+		for (int i =0;i<snake.size();i++) {
+			if (loc.equals(snake.get(i).getLocation())) {
+				return true;
+			}
+		
 		}
 		return false;
 	}
