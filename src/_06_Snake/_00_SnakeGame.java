@@ -10,6 +10,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.Random;
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -52,7 +53,7 @@ public class _00_SnakeGame implements ActionListener, KeyListener {
 				g2.fillRect(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT);
 
 				g2.setColor(FOOD_COLOR);
-				g2.drawOval(foodLocation.x * WINDOW_SCALE, foodLocation.y * WINDOW_SCALE, Snake.BODY_SIZE,
+				g2.fillOval(foodLocation.x * WINDOW_SCALE, foodLocation.y * WINDOW_SCALE, Snake.BODY_SIZE,
 						Snake.BODY_SIZE);
 				snake.draw(g);
 			}
@@ -75,10 +76,11 @@ public class _00_SnakeGame implements ActionListener, KeyListener {
 
 	public void startGame() {
 		//1. Save the instructions for the game in the following string variable.
-		String instructions = "";
+	ImageIcon icon = new ImageIcon ("src/_O6_Snake/snakeicon.png");
+		String instructions = "Choose the difficulty of how quickly the snake moves. Be careful, don't hit the walls";
 		
 		String[] options = new String[] { "Expert", "Moderate", "Beginner" };
-		int input = JOptionPane.showOptionDialog(null, instructions, "Snake", 0, -1, null, options, 0);
+		int input = JOptionPane.showOptionDialog(panel, instructions, "Snake",0,-1, icon, options, 0);
 
 		String choice = options[input];
 		
